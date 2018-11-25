@@ -19,7 +19,6 @@ digit [0-9]
 "\""({alnum}|"-"|":"|";"|"."|"/"|"#"|"'"|" "|",")+"\""      {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return STRING;}
 {digit}+                                                    {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return NUMBER;}
 ({alnum}|"-")+                                              {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return ALNUM;}
-
 [\n]                                                        {yyl++;chno=1;}
 [ \t]                                                       {yylval.str=strdup(yytext); chno+=strlen(yylval.str);}
 
