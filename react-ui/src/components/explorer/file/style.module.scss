@@ -1,0 +1,23 @@
+.file{
+    cursor: pointer;
+    background: lightgrey;
+    box-sizing: border-box;
+    width: 100%;
+
+    & .nameholder:hover{
+        background: grey;
+    }
+
+    & .icon{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+    }
+
+    & .name{
+        display: inline-block;
+        width: calc(100% - 20px);
+        height: 20px;
+    }
+}
