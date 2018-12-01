@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.module.scss';
 
-import ExplorerFolder from './folder';
-import ExplorerFile from './file';
+import ExplorerItem from './item';
 
 class Explorer extends Component {
   constructor(props){
@@ -19,11 +18,10 @@ class Explorer extends Component {
 
   render() {
     let contents = this.state.contents.map(x=>{
-      let ExplorerItem = x.type=='folder'?ExplorerFolder:ExplorerFile;
-        return (<ExplorerItem path={x.file_path} name={x.name} level={0} />);
+      return (<ExplorerItem path={x.file_path} name={x.name} level={0} type={x.type}/>);
     });
     return (
-      <div className={styles["explorer"]} style={{background: "lightgrey"}}>
+      <div className={styles["explorer"]}>
         {contents}
       </div>
     );

@@ -21,7 +21,6 @@
 %token SLASH
 %token COLON
 %token EQUAL
-%token TEXT
 %%
 
 XMLDocument: document{
@@ -33,7 +32,7 @@ document:                       xml_node node
 xml_node:                       OPEN_TAG QMARK ALNUM QMARK CLOSE_TAG
                                 |OPEN_TAG QMARK ALNUM attribute_list QMARK CLOSE_TAG
 node:                           node_start node_end
-                                |node_start TEXT node_end
+                                |node_start text node_end
                                 |single_node
                                 |node_start node_list node_end
 single_node:                    OPEN_TAG node_name SLASH CLOSE_TAG
@@ -50,6 +49,7 @@ attribute_value:                STRING                      {cout<<"Found attrib
 node_end:                       OPEN_TAG SLASH node_name CLOSE_TAG
 node_name:                      ALNUM
                                 |ALNUM COLON ALNUM
+text:                           text ALNUM | ALNUM
 
 %%
 

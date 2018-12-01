@@ -1,11 +1,16 @@
-.file{
+.item{
     cursor: pointer;
-    background: lightgrey;
     box-sizing: border-box;
     width: 100%;
+    color: #212121;
+
+    & .nameholder{
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
 
     & .nameholder:hover{
-        background: grey;
+        background: #dedede;
     }
 
     & .icon{
@@ -13,11 +18,16 @@
         width: 20px;
         height: 20px;
         text-align: center;
+        font-size: 0.9em;
     }
 
     & .name{
         display: inline-block;
         width: calc(100% - 20px);
         height: 20px;
+    }
+
+    &> .contents{
+        width: 100%;
     }
 }
