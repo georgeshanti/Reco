@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.bottom{
+  display: grid;
+  grid-template-columns: 300px 10px calc(100% - 310px);
+  width: 100%;
+  height: 100%;
+}
+
+h1{
+  margin: 0px;
+}
