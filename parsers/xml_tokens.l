@@ -11,18 +11,6 @@ digit [0-9]
 special [!@#$%&*()_+{};:'",.<>|?/]
 
 %%
-<<<<<<< HEAD
-"?"                                                         {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return QMARK;}
-"="                                                         {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return EQUAL;}
-":"                                                         {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return COLON;}
-"<"                                                         {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return OPEN_TAG;}
-">"                                                         {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return CLOSE_TAG;}
-"/"                                                         {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return SLASH;}
-"\""({alnum}|"-"|":"|";"|"."|"/"|"#"|"'"|" "|",")+"\""      {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return STRING;}
-{digit}+                                                    {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return NUMBER;}
-({alnum}|"-")+                                              {yylval.str=strdup(yytext); chno+=strlen(yylval.str); return ALNUM;}
-[\n]                                                        {yyl++;chno=1;}
-=======
 "?"                                                         {yylval.str=strdup(yytext); chno+=strlen(yylval.str); std::cout<<"Detected question mark\n"; return QMARK;}
 "-"                                                         {yylval.str=strdup(yytext); chno+=strlen(yylval.str); std::cout<<"Detected hyphen\n"; return HYPHEN;}
 "="                                                         {yylval.str=strdup(yytext); chno+=strlen(yylval.str); std::cout<<"Detected equal\n"; return EQUAL;}
@@ -34,7 +22,6 @@ special [!@#$%&*()_+{};:'",.<>|?/]
 "\""({alnum}|"-"|":"|";"|"."|"/"|"#"|"'"|" "|",")+"\""      {yylval.str=strdup(yytext); chno+=strlen(yylval.str); std::cout<<"Detected string\n"; return STRING;}
 
 [\n]                                                        {yyl++;chno=0;}
->>>>>>> react-ui
 [ \t]                                                       {yylval.str=strdup(yytext); chno+=strlen(yylval.str);}
 
 %%

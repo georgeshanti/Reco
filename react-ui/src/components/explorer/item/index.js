@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faCaretRight, faFile, faFolder, faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 
 class ExplorerItem extends Component {
   constructor(props){
@@ -14,11 +14,15 @@ class ExplorerItem extends Component {
     var icon = faFile;
     if(this.props.type=='folder'){
       this.getContents = this.getContents.bind(this);
-      this.icon = faCaretRight;
+      this.dropDown = faCaretRight;
+      this.icon = faFolder;
+      this.iconOpened = faFolderOpen;
     }
     else{
       this.getContents = null;
+      this.dropDown = null;
       this.icon = faFile;
+      this.iconOpened = faFile;
     }
   }
 
@@ -37,10 +41,12 @@ class ExplorerItem extends Component {
 
     let display = this.state.opened?"block":"none";
     let rotation = this.state.opened?"rotate(45deg)":"rotate(0deg)";
+    let icon = this.state.opened?this.iconOpened:this.icon;
     return (
       <div className={styles["item"]}>
         <div className={styles["nameholder"]} style={{paddingLeft: (this.props.level*20)+8+"px"}} onClick={this.getContents}>
-            <div className={styles["icon"]} style={{transform: rotation}}><FontAwesomeIcon icon={this.icon} /></div>
+            <div className={styles["icon"]} style={{transform: rotation}}><FontAwesomeIcon icon={this.dropDown} /></div>
+            <div className={styles["icon"]}><FontAwesomeIcon icon={icon} /></div>
             {this.props.name}
         </div>
         <div className={styles["contents"]} style={{display: display}}>
