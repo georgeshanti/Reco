@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "moduleResolution": "node",
+        "baseUrl": "src",
+        "paths":{}
+    },
+    "include":[
+        "./src"
+    ]
+}
