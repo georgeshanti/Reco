@@ -5,7 +5,8 @@ class Document extends Component{
     render(){
         return(
             <div className={styles["document"]}>
-                <h1>Document</h1>
+                <div style={{width: "1000px", background: "white", margin:"auto", height: "1000px"}}>
+                </div>
             </div>
         )
     }

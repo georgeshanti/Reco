@@ -7,10 +7,20 @@
     & .nameholder{
         padding-top: 2px;
         padding-bottom: 2px;
+        color: #001531;
     }
 
     & .nameholder:hover{
         background: #dedede;
+    }
+
+    & .dropdown{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: 0.9em;
+        transition: 0.25s;
     }
 
     & .icon{
@@ -19,6 +29,7 @@
         height: 20px;
         text-align: center;
         font-size: 0.9em;
+        margin-right: 5px;
     }
 
     & .name{

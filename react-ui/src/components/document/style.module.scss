@@ -1,4 +1,8 @@
 .document{
     width: 100%;
-    height: calc(100% - 210px);
+    height: calc(100% - 206px);
+    box-sizing: border-box;
+    overflow: auto;
+    background: #d4d4d4;
+    padding: 50px 0px; 
 }

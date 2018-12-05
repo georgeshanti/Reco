@@ -17,12 +17,14 @@ class ExplorerItem extends Component {
       this.dropDown = faCaretRight;
       this.icon = faFolder;
       this.iconOpened = faFolderOpen;
+      this.iconColor = 'rgb(0, 192, 255)';
     }
     else{
       this.getContents = null;
       this.dropDown = null;
       this.icon = faFile;
       this.iconOpened = faFile;
+      this.iconColor = '#0000ff';
     }
   }
 
@@ -45,8 +47,8 @@ class ExplorerItem extends Component {
     return (
       <div className={styles["item"]}>
         <div className={styles["nameholder"]} style={{paddingLeft: (this.props.level*20)+8+"px"}} onClick={this.getContents}>
-            <div className={styles["icon"]} style={{transform: rotation}}><FontAwesomeIcon icon={this.dropDown} /></div>
-            <div className={styles["icon"]}><FontAwesomeIcon icon={icon} /></div>
+            <div className={styles["dropdown"]} style={{transform: rotation}}><FontAwesomeIcon icon={this.dropDown} /></div>
+            <div className={styles["icon"]} style={{color: this.iconColor}}><FontAwesomeIcon icon={icon} /></div>
             {this.props.name}
         </div>
         <div className={styles["contents"]} style={{display: display}}>

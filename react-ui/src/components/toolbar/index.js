@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 class Toolbar extends Component{
     render(){
         return(
-            <div className={styles["toolbar"]} style={{background: "lightgrey"}}>
+            <div className={styles["toolbar"]}>
                 <h1>Toolbar</h1>
             </div>
         )

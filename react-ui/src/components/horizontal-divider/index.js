@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 class HorizontalDivider extends Component {
   render() {
     return (
-      <div className={styles["horizontal-divider"]} style={{background: "grey"}}></div>
+      <div className={styles["horizontal-divider"]}></div>
     );
   }
 }
