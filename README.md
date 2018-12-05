@@ -1,10 +1,10 @@
 # Reco
 
-## Langauges
 [![Generic badge](https://img.shields.io/badge/Electron-TypeScript-blue.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/React-JavaScript-yellow.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/StyleSheet-Scss-pink.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/Parser-C++-blue.svg)](https://shields.io/)
+
 ## Progress
   - XML Parser will read an XML and save to JSON file.
   - React App has been started.
