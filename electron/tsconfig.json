@@ -5,7 +5,8 @@
         "baseUrl": ".",
         "paths":{
             "@utils/*": ["src/utils/*"],
-            "@office/*": ["src/office/*"]
+            "@office/*": ["src/office/*"],
+            "@misc/*": ["src/misc/*"]
         }
     },
     "include":[
