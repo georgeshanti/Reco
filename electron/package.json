@@ -18,6 +18,7 @@
   "_moduleAliases": {
     "@root": ".",
     "@utils": "dist/utils",
-    "@office": "dist/office/*"
+    "@office": "dist/office/*",
+    "@misc": "dist/misc"
   }
 }
