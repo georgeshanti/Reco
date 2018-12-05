@@ -2,8 +2,11 @@
     "compilerOptions": {
         "outDir": "dist",
         "moduleResolution": "node",
-        "baseUrl": "src",
-        "paths":{}
+        "baseUrl": ".",
+        "paths":{
+            "@utils/*": ["src/utils/*"],
+            "@office/*": ["src/office/*"]
+        }
     },
     "include":[
         "./src"

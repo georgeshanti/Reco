@@ -1,6 +1,8 @@
+require('module-alias/register');
+
 import * as Electron from 'electron';
 
-import { registerListeners } from '../utils/listeners';
+import { registerListeners } from '@utils/listeners';
 
 class Office{
 

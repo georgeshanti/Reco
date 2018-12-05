@@ -12,10 +12,12 @@
     "typescript": "^3.2.1"
   },
   "dependencies": {
-    "electron": "^3.0.10"
+    "electron": "^3.0.10",
+    "module-alias": "^2.1.0"
   },
-  "alias":{
-    "utils": "./dist/utils",
-    "office": "./dist/office/*"
+  "_moduleAliases": {
+    "@root": ".",
+    "@utils": "dist/utils",
+    "@office": "dist/office/*"
   }
 }
