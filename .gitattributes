@@ -1,0 +1,9 @@
+$ cat .gitattributes
+*.js linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.cpp linguist-language=C++
+*.tab.c linguist-language=C++
+*.tab.h linguist-language=C++
+*.yy.c linguist-language=C++
+*.scss linguist-language=SCSS
+*.css linguist-language=SCSS

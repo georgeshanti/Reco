@@ -1,6 +1,7 @@
 .*
 */.*
 !.gitignore
+!.gitattributes
 !*/.gitignore
 
 node_modules/*
