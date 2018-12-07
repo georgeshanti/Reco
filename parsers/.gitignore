@@ -1,9 +1,3 @@
-*.out
-*.tab.c
-*.tab.h
-*.yy.c
-
-*/*.out
-*/*.tab.c
-*/*.tab.h
-*/*.yy.c
+node_modules
+*.log
+build
