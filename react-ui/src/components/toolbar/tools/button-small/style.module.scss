@@ -1,0 +1,43 @@
+.button{
+    height: 30px;
+    width: 40px;
+    font-size: 1.3em;
+    margin: 1px;
+    color: #2e2f33;
+    color: blue;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+
+    & > svg{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        vertical-align: sub;
+    }
+
+    & > .tooltip{
+        background: #427494;
+        font-size: 0.6em;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transform: translateY(100%);
+        z-index: -1;
+        padding: 2px 3px;
+        color: white;
+        border-radius: 2px;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    & > .tooltip.focus{
+        z-index: 2;
+        opacity: 1;
+    }
+
+    &:hover{
+        background: #e4e4e4;
+    }
+}

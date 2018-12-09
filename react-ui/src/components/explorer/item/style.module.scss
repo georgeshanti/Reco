@@ -5,9 +5,11 @@
     color: #212121;
 
     & .nameholder{
+        margin-left: 2px;
         padding-top: 2px;
         padding-bottom: 2px;
         color: #001531;
+        border-radius: 20px;
     }
 
     & .nameholder:hover{
