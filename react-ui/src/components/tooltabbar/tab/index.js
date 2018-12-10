@@ -3,21 +3,17 @@ import styles from './style.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-class Tab extends Component {
+class ToolTab extends Component {
   render() {
     let classname = styles["tab"] + ( this.props.selected?" "+styles["selected"]:"" );
-    classname += " " +styles[this.props.file.type];
     return (
-      <div className={classname} onClick={this.props.changeTab}>
+      <div className={classname}>
         <div className={styles["grid"]}>
-            <div className={styles["filename"]}>{this.props.file.name}</div>
-            <div className={styles["close-button"]}>
-                <FontAwesomeIcon icon={faTimes} />
-            </div>
+            <div className={styles["tabname"]}>{this.props.name}</div>
         </div>
       </div>
     );
   }
 }
 
-export default Tab;
+export default ToolTab;

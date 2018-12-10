@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from './style.module.scss';
+import toolboxStyles from 'components/toolbar/toolbox/toolbox.style.module.scss';
 
 import { faSave, faClone, faPrint, faFilePdf, faUndo, faRedo } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,7 +18,9 @@ class FileToolbox extends Component{
             {
                 icon: faClone,
                 name: "Clone"
-            },
+            }
+        ]
+        this.tools1=[
             {
                 icon: faUndo,
                 name: "Undo"
@@ -25,7 +28,9 @@ class FileToolbox extends Component{
             {
                 icon: faRedo,
                 name: "Redo"
-            },
+            }
+        ]
+        this.tools2=[
             {
                 icon: faPrint,
                 name: "Print"
@@ -39,10 +44,18 @@ class FileToolbox extends Component{
 
     render(){
         let tools = this.tools.map(x=>(<ButtonSmall button={x} />));
+        let tools1 = this.tools1.map(x=>(<ButtonSmall button={x} />));
+        let tools2 = this.tools2.map(x=>(<ButtonSmall button={x} />));
         return(
             <Toolbox nametag="File">
-                <div style={{display: "grid", gridTemplateColumns: "1fr 1fr"}}>
+                <div className={toolboxStyles["section"]} style={{gridTemplateColumns: "1fr 1fr"}}>
                     {tools}
+                </div>
+                <div className={toolboxStyles["section"]} style={{gridTemplateColumns: "1fr 1fr"}}>
+                    {tools1}
+                </div>
+                <div className={toolboxStyles["section"]} style={{gridTemplateColumns: "1fr 1fr"}}>
+                    {tools2}
                 </div>
             </Toolbox>
         );

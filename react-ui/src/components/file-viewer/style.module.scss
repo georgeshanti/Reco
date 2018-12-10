@@ -1,4 +1,5 @@
 .file-viewer{
+    display: none;
     width: calc(100%);
     margin: auto;
     height: calc(100% - 41px);
@@ -7,5 +8,23 @@
     border-width: 6px;
     border-bottom-width: 0px;
     box-sizing: border-box;
-    border-color: #f9f9f9;
+
+    &.doc{
+        background: #0073bd;
+        border-color: #0073bd;
+    }
+
+    &.sprd{
+        background: #00922d;
+        border-color: #00922d;
+    }
+
+    &.ppt{
+        background: #e46900;
+        border-color: #e46900;
+    }
+
+    &.selected{
+        display: block;
+    }
 }

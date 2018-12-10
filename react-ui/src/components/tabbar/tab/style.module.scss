@@ -2,16 +2,30 @@
     display: inline-block;
     width: 250px;
     padding: 10px 10px;
-    margin-right: 1px;
+    margin-right: 0px;
     background: #e8e8e8;
+    color: white;
     cursor: pointer;
 
-    &.selected{
-        background: #f9f9f9;
+    &.doc{
+        background: #0073bd;
+    }
+    &.doc.selected{
+        background: #0073bd;
     }
 
-    &:hover{
-        background: #bbbbbb;
+    &.sprd{
+        background: #00561a;
+    }
+    &.sprd.selected{
+        background: #00922d;
+    }
+
+    &.ppt{
+        background: #a24b00;
+    }
+    &.ppt.selected{
+        background: #e46900;
     }
 
     & > .grid{

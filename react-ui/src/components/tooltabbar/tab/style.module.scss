@@ -1,0 +1,25 @@
+.tab{
+    display: inline-block;
+    width: 100px;
+    padding: 10px 10px;
+    margin-right: 1px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+
+    &:hover{
+        background: rgba(0,0,0,0.1);
+    }
+
+    &.selected{
+        background: #f9f9f9;
+        color: black;
+    }
+
+    & > .grid{
+
+        & > .filename{
+            width: 100%;
+        }
+    }
+}

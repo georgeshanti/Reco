@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from './style.module.scss';
+import toolboxStyles from 'components/toolbar/toolbox/toolbox.style.module.scss';
 
 import { faAlignLeft, faAlignCenter, faAlignRight, faAlignJustify } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,7 +15,7 @@ class FontToolbox extends Component{
             {
                 icon: faAlignLeft,
                 name: 'Left',
-
+                selected: true
             },{
                 icon: faAlignCenter,
                 name: 'Center'
@@ -31,8 +32,8 @@ class FontToolbox extends Component{
     render(){
         let tools = this.tools.map(x=>(<ButtonSmall button={x} />));
         return(
-            <Toolbox nametag="Font">
-                <div style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr"}}>
+            <Toolbox nametag="Alignment">
+                <div className={toolboxStyles["section"]} style={{gridTemplateColumns: "1fr 1fr 1fr 1fr"}}>
                     {tools}
                 </div>
             </Toolbox>

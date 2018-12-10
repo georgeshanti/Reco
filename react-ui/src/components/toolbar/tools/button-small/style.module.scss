@@ -4,10 +4,13 @@
     font-size: 1.3em;
     margin: 1px;
     color: #2e2f33;
-    color: blue;
     cursor: pointer;
     position: relative;
-    border-radius: 3px;
+    border-radius: 15px;
+
+    &.selected{
+        color: #009bff;
+    }
 
     & > svg{
         position: absolute;

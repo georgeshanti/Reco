@@ -29,8 +29,9 @@ class ButtonSmall extends Component{
 
     render(){
         let tipClass = styles["tooltip"] + (this.state.tip ? (" " + styles["focus"]) : "")
+        let buttonClass = styles["button"] + (this.props.button.selected ? (" " + styles["selected"]) : "")
         return(
-            <div className={styles["button"]} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+            <div className={buttonClass} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
                 <FontAwesomeIcon icon={this.props.button.icon} />
                 <span className={tipClass}>{ this.props.button.name }</span>
             </div>

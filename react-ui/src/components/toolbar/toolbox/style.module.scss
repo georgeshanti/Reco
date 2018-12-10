@@ -1,25 +1,23 @@
 .toolbox{
     text-align: center;
     height: 100%;
-    background: white;
     display: inline-block;
     margin: 0px 5px;
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 1px;
     overflow: hidden;
     padding: 5px;
     box-sizing: border-box;
-    border-color: #d4d4d4;
-    box-shadow: black 0px 0px 13px -5px;
 
     & > .tools-container{
-        height: calc(100% - 16px);
+        height: calc(100% - 18px);
     }
 
     & > span{
+        text-align: center;
         display: block;
         color: #2e2f33;
+        background: white;
+        border-radius: 0px 0px 10px 10px;
         font-size: 0.9em;
+        box-shadow: black 0px 1px 12px -5px;
     }
 }

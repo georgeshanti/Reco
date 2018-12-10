@@ -1,0 +1,16 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section{
+    margin: 5px 0px;
+    display: inline-grid;
+    vertical-align: middle;
+    background: white;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 0px;
+    box-sizing: border-box;
+    box-shadow: black 0px 0px 12px -5px;
+}
